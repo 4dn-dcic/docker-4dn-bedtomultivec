@@ -7,8 +7,8 @@ ASSEMBLY=$2
 RESOLUTION=$3
 ROW_INFOS_FILE=$4
 NUM_ROWS=$5
-FORMAT=$6
-OUTDIR=$7
+#FORMAT=$6
+OUTDIR=$6
 
 FILE_BASE=$(basename $INPUT)
 FILE_NAME=${FILE_BASE%.*}
@@ -23,9 +23,9 @@ outputfile = "$OUTDIR/$FILE_NAME.multires.mv5"
 
 clodius convert bedfile_to_multivec \
     $INPUT \
-    --output-file $OUTDIR
+    --output-file $OUTDIR \
     --assembly $ASSEMBLY \
     --starting-resolution $RESOLUTION \
     --num-rows $NUM_ROWS \
-    --format states
+    --format states \
     --row_infos-filename $ROW_INFOS_FILE
