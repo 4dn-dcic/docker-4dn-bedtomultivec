@@ -18,8 +18,6 @@ RUN apt-get update -y && apt-get install -y \
     openjdk-8-jre \
     parallel \
     perl \
-    python-dev \
-    python-pip \
     r-base-dev \
     time \
     unzip \
@@ -30,6 +28,12 @@ RUN apt-get update -y && apt-get install -y \
     
 # installing python libraries
 #RUN pip install scipy==1.1.0
+
+RUN apt-get update -y && apt-get install -y \
+   python3.5-dev \
+   python3-setuptools \
+   && wget https://bootstrap.pypa.io/get-pip.py \
+   && python3.5 get-pip.py
 
 # download tools
 WORKDIR /usr/local/bin
