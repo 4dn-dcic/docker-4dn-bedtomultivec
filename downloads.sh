@@ -5,5 +5,5 @@
 git clone https://github.com/higlass/clodius
 cd clodius/
 git checkout develop
-/usr/local/bin/python setup.py develop
+/usr/bin/python setup.py develop
 cd ..
