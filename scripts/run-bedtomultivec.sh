@@ -19,11 +19,11 @@ then
   mkdir $OUTDIR
 fi
 
-outputfile = "$OUTDIR/$FILE_NAME.multires.mv5"
+outputfile="$OUTDIR/$FILE_NAME.multires.mv5"
 
 clodius convert bedfile_to_multivec \
     $INPUT \
-    --output-file $OUTDIR \
+    --output-file $outputfile \
     --assembly $ASSEMBLY \
     --starting-resolution $RESOLUTION \
     --num-rows $NUM_ROWS \
