@@ -6,5 +6,5 @@ git clone https://github.com/higlass/clodius
 cd clodius/
 git checkout develop
 #/usr/bin/python setup.py develop
-clodius --help
+sudo clodius --help
 cd ..
