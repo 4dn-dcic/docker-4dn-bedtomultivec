@@ -1,7 +1,13 @@
 {
    "bedfile": {
        "class": "File",
-       "path": "../test_files/test_file1.bed.gz"
+       "path": "../test_files/states_format_input_testfile.bed.gz"
    },
-   "assembly": "hg38"
+   "assembly": "hg19",
+   "resolution": 200,
+   "row_infos_file": {
+       "class": "File",
+       "path": "../test_files/states_format_test_row_infos.txt"
+   },
+   "num-rows": 10
 }
