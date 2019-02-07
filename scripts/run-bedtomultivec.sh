@@ -21,11 +21,11 @@ fi
 
 outputfile="$OUTDIR/$FILE_NAME.multires.mv5"
 
-clodius convert bedfile_to_multivec \
+clodius convert bedfile-to-multivec \
     $INPUT \
     --output-file $outputfile \
     --assembly $ASSEMBLY \
     --starting-resolution $RESOLUTION \
     --num-rows $NUM_ROWS \
     --format states \
-    --row_infos-filename $ROW_INFOS_FILE
+    --row-infos-filename $ROW_INFOS_FILE
