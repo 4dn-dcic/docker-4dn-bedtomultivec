@@ -1,0 +1,7 @@
+{
+   "bedfile": {
+       "class": "File",
+       "path": "../test_files/test_file1.bed.gz"
+   },
+   "assembly": "hg38"
+}
