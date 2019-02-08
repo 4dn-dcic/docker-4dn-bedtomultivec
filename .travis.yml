@@ -10,7 +10,7 @@ services:
   - docker
  
 env:
-  - LOCAL_NAME=docker-4dn-bedtobeddb REMOTE_NAME=4dndcic/4dn-bedtobeddb
+  - LOCAL_NAME=docker-4dn-bedtomultivec REMOTE_NAME=4dndcic/4dn-bedtomultivec
 
 install:
   - docker build -t $LOCAL_NAME .
