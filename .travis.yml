@@ -25,7 +25,7 @@ before_script:
     fi;
 
 script:
-  - source tests/tests_cwl.sh bedtobeddb
+  - source tests/tests_cwl.sh bedtomultivec
 
 after_success:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
