@@ -46,6 +46,6 @@ outputs:
  multivecfile:
   type: File
   outputBinding:
-   glob: "$(inputs.outdir + '/' +  '*.multires.mv5')"
+   glob: "$(inputs.outdir + '/' +  '*.bed.multires.mv5')"
 
 baseCommand: ["run-bedtomultivec.sh"]
