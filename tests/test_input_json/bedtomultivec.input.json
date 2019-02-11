@@ -9,5 +9,5 @@
        "class": "File",
        "path": "../test_files/states_format_test_row_infos.txt"
    },
-   "num-rows": 10
+   "num_rows": 10
 }
