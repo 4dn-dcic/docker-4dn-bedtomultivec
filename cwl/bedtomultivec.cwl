@@ -43,7 +43,7 @@ inputs:
   default: "."
 
 outputs:
- multivecfile:
+ multivec_file:
   type: File
   outputBinding:
    glob: "$(inputs.outdir + '/' +  '*.bed.multires.mv5')"
