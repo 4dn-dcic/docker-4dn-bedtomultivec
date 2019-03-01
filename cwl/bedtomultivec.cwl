@@ -16,8 +16,8 @@ inputs:
   inputBinding:
    position: 1
 
- assembly:
-  type: string
+ chromsizes_file:
+  type: File
   inputBinding:
    position: 2
  
