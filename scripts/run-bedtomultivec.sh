@@ -3,7 +3,7 @@
 # Converts a bed file in a 'states' format to multivec
 
 INPUT=$1
-ASSEMBLY=$2
+CHROMSIZES=$2
 RESOLUTION=$3
 ROW_INFOS_FILE=$4
 NUM_ROWS=$5
@@ -22,7 +22,7 @@ outputfile="$OUTDIR/$FILE_NAME.multires.mv5"
 clodius convert bedfile-to-multivec \
     $INPUT \
     --output-file $outputfile \
-    --assembly $ASSEMBLY \
+    --chromsizes-filename $CHROMSIZES \
     --starting-resolution $RESOLUTION \
     --num-rows $NUM_ROWS \
     --format states \
