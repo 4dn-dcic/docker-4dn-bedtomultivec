@@ -3,7 +3,9 @@
        "class": "File",
        "path": "../test_files/states_format_input_testfile.bed.gz"
    },
-   "assembly": "hg19",
+   "chromsizes_file": {
+      "class": "File",
+      "path": "../test_files/hg19_chromsizes.txt"
    "resolution": 200,
    "row_infos_file": {
        "class": "File",
