@@ -8,8 +8,6 @@ RESOLUTION=$3
 ROW_INFOS_FILE=$4
 NUM_ROWS=$5
 OUTDIR=$6
-HEADER=$7
-HEADER_FLAG = "--no-header"
 
 FILE_BASE=$(basename $INPUT)
 FILE_NAME=${FILE_BASE%.*}
@@ -34,4 +32,3 @@ clodius convert bedfile-to-multivec \
     --num-rows $NUM_ROWS \
     --format states \
     --row-infos-filename $ROW_INFOS_FILE
-    $HEADER_FLAG
