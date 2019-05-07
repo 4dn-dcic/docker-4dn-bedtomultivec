@@ -6,7 +6,7 @@ cwlVersion: v1.0
 
 requirements:
 - class: DockerRequirement
-  dockerPull: "4dndcic/4dn-bedtomultivec:v1"
+  dockerPull: "4dndcic/4dn-docker-bedtomultivec:v4"
 
 - class: "InlineJavascriptRequirement"
 
