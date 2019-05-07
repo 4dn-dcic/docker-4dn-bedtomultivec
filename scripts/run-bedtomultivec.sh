@@ -8,6 +8,8 @@ RESOLUTION=$3
 ROW_INFOS_FILE=$4
 NUM_ROWS=$5
 OUTDIR=$6
+HEADER=$7
+HEADER_FLAG = "--no-header"
 
 FILE_BASE=$(basename $INPUT)
 FILE_NAME=${FILE_BASE%.*}
@@ -15,6 +17,11 @@ FILE_NAME=${FILE_BASE%.*}
 if [ ! -d "$OUTDIR" ]
 then
   mkdir $OUTDIR
+fi
+
+if ["$HEADER" = "yes"]
+then
+  $HEADER_FLAG = "--has-header"
 fi
 
 outputfile="$OUTDIR/$FILE_NAME.multires.mv5"
@@ -27,3 +34,4 @@ clodius convert bedfile-to-multivec \
     --num-rows $NUM_ROWS \
     --format states \
     --row-infos-filename $ROW_INFOS_FILE
+    $HEADER_FLAG
