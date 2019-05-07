@@ -17,11 +17,6 @@ then
   mkdir $OUTDIR
 fi
 
-if ["$HEADER" = "yes"]
-then
-  $HEADER_FLAG = "--has-header"
-fi
-
 outputfile="$OUTDIR/$FILE_NAME.multires.mv5"
 
 clodius convert bedfile-to-multivec \
