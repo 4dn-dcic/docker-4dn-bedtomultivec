@@ -6,7 +6,7 @@ cwlVersion: v1.0
 
 requirements:
 - class: DockerRequirement
-  dockerPull: "4dndcic/4dn-bedtomultivec:v1"
+  dockerPull: "4dndcic/4dn-bedtomultivec:v4"
 
 - class: "InlineJavascriptRequirement"
 
@@ -16,8 +16,8 @@ inputs:
   inputBinding:
    position: 1
 
- assembly:
-  type: string
+ chromsizes_file:
+  type: File
   inputBinding:
    position: 2
  
@@ -43,7 +43,7 @@ inputs:
   default: "."
 
 outputs:
- multivecfile:
+ multivec_file:
   type: File
   outputBinding:
    glob: "$(inputs.outdir + '/' +  '*.bed.multires.mv5')"
