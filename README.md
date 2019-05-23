@@ -48,4 +48,32 @@ Sample data files that can be used for testing the tools are included in the `sa
 
 ## Tool wrappers
 
-Tool wrappers are under the `scripts` directory and follow naming conventions `run-xx.sh`. These wrappers are copied to the docker image at built time and may be used as a single step in a workflow. (Current version has no tool wrappers)
+Tool wrappers are under the `scripts` directory and follow naming conventions `run-xx.sh`. These wrappers are copied to the docker image at built time and may be used as a single step in a workflow.
+
+```
+# default
+docker run 4dndcic/4dn-bedtomultivec
+
+# specific run command
+docker run 4dndcic/4dn-bedtomultivec <run-xx.sh> <arg1> <arg2> ...
+
+# may need -v option to mount data file/folder if they are used as arguments.
+docker run -v /data1/:/d1/:rw -v /data2/:/d2/:rw 4dndcic/4dn-bedtobmultivec <run-xx.sh> /d1/file1 /d2/file2 ...
+```
+
+### run-bedtomultivec.sh
+This converts a bed file into multivecformat to be visualized in Higlass
+* Input: a bed file
+* Output: a multivec file
+
+#### Usage
+Run the following in the container
+```
+run-bedtomultivec <bedfile> <chromsizes file> <resolution> <rows_infos_file> <num_rows> <outdir>
+# bedfile: input bedfile
+# chromsizes file: a file containing the chromosome sizes and order
+# resolution: the base resolution of the data. Used to determine how much space to allocate in the multivec file
+# rows_infos_file: a file containing the names of the rows in the multivec file
+# num_rows: the number of rows at each position in the multivec format
+# outdir: output directory
+```
