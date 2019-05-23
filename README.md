@@ -67,7 +67,7 @@ This converts a bed file into multivecformat to be visualized in Higlass
 * Output: a multivec file
 
 #### Usage
-Run the following in the container
+Runs the following in the container
 ```
 run-bedtomultivec <bedfile> <chromsizes file> <resolution> <rows_infos_file> <num_rows> <outdir>
 # bedfile: input bedfile
