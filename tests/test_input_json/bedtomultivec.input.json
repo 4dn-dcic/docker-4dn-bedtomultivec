@@ -8,7 +8,7 @@
       "path": "../test_files/hg19_chromsizes.txt"
    },
    "resolution": 200,
-   "row_infos_file": {
+   "rows_info": {
        "class": "File",
        "path": "../test_files/states_format_test_row_infos.txt"
    },
