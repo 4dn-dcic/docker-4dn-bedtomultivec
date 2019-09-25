@@ -26,7 +26,7 @@ inputs:
   inputBinding:
    position: 3
   
- row_infos_file:
+ row_infos:
   type: File
   inputBinding:
    position: 4
